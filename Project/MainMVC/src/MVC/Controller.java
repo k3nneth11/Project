@@ -70,7 +70,24 @@ public class Controller {
 				
 			}
 
-		);		
+		);
+                
+                view.getStoreBtn().setOnAction(
+			new EventHandler<ActionEvent>()
+			{
+			@Override
+			public void handle(ActionEvent event) 
+			{
+			 //set the fields
+			MVC currentTicket = model.getCurrentTicket();
+			
+			model.storeTicketObject(currentTicket);
+				
+			}
+				
+			}
+
+		);
 		view.getViewAllBtn().setOnAction(
 			new EventHandler<ActionEvent>()
 			{

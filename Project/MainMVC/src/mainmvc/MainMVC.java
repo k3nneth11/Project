@@ -8,12 +8,11 @@ package mainmvc;
 import MVC.Controller;
 import MVC.Model;
 import MVC.View;
+import MVC.View2;
+import MVC.View3;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 /**
@@ -24,15 +23,21 @@ public class MainMVC extends Application {
     
    @Override
 	public void start(Stage primaryStage) {
-
+                BorderPane border = new BorderPane();
+                
 		
 		View view = new View();
+                View2 view2 = new View2();
+                View3 view3 = new View3();
+                border.setCenter(view);
+                border.setBottom(view2);
+                border.setRight(view3);
 		Model model = new Model();
                
                 
 		Controller mc = new Controller(model,view);
 		
-		Scene scene = new Scene(view, 600, 500);
+		Scene scene = new Scene(border, 1600, 1500);
 		
 		primaryStage.setTitle("Ticket Citation!");
 		primaryStage.setScene(scene);

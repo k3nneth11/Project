@@ -11,6 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 
 /**
@@ -18,7 +19,7 @@ import javafx.scene.layout.GridPane;
  * @author KennyBoiii
  */
 public class View extends GridPane {
-    
+        
         private Label     licensenumLabel  = new Label("Enter License Number: ");
 	private TextField licensenumTF = new TextField();
 	
@@ -49,6 +50,7 @@ public class View extends GridPane {
 	private Button submitBtn = new Button("Submit Data");
 	private Button viewBtn = new Button("View data");
 	private Button viewAllBtn = new Button("View all data");
+        private Button storeBtn = new Button("Store Ticket");
        
 	public View()
 	{
@@ -61,8 +63,10 @@ public class View extends GridPane {
                 this.addRow(6, locationLabel, locationTF);
                 this.addRow(7, citationnumLabel, citationnumTF);
 		this.addRow(8, submitBtn);
-		this.addRow(9, viewBtn);
-		this.addRow(10, viewAllBtn);
+                this.addRow(9, storeBtn);
+		this.addRow(10, viewBtn);
+		this.addRow(11, viewAllBtn);
+                
                 this.setAlignment(Pos.CENTER);
                 
                 
@@ -476,6 +480,20 @@ public class View extends GridPane {
      */
     public void setAllTicketsTA(TextArea AllTicketsTA) {
         this.AllTicketsTA = AllTicketsTA;
+    }
+
+    /**
+     * @return the storeBtn
+     */
+    public Button getStoreBtn() {
+        return storeBtn;
+    }
+
+    /**
+     * @param storeBtn the storeBtn to set
+     */
+    public void setStoreBtn(Button storeBtn) {
+        this.storeBtn = storeBtn;
     }
     
 }
