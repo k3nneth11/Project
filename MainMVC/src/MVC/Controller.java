@@ -55,22 +55,23 @@ public class Controller {
 
 		);
 		
-		view.getViewBtn().setOnAction(
+		/*view.getViewBtn().setOnAction(
 			new EventHandler<ActionEvent>()
 			{
 			@Override
 			public void handle(ActionEvent event) 
 			{
-			 //set the fields
-			MVC currentTicket = model.getCurrentTicket();
-			
-			view.updateTicketView(currentTicket);
+			 model.Database();
+                        ArrayList<MVC> MVC = model.getCurrentTickets();
+		
+                        view.updateTicketView(MVC);
+                       view.ClearViewTA();
 				
 			}
 				
 			}
 
-		);
+		);*/
                 
                 view.getStoreBtn().setOnAction(
 			new EventHandler<ActionEvent>()
@@ -81,7 +82,6 @@ public class Controller {
 			 //set the fields
 			MVC currentTicket = model.getCurrentTicket();
 			
-			model.storeTicketObject(currentTicket);
 				
 			}
 				

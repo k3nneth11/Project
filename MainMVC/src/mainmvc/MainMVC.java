@@ -12,6 +12,7 @@ import MVC.View2;
 import MVC.View3;
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.control.TextArea;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -20,6 +21,7 @@ import javafx.stage.Stage;
  * @author KennyBoiii
  */
 public class MainMVC extends Application {
+    private TextArea TA = new TextArea();
     
    @Override
 	public void start(Stage primaryStage) {
@@ -32,6 +34,7 @@ public class MainMVC extends Application {
                 border.setCenter(view);
                 border.setBottom(view2);
                 border.setRight(view3);
+                border.setLeft(getTA());
 		Model model = new Model();
                
                 
@@ -50,5 +53,19 @@ public class MainMVC extends Application {
 	public static void main(String[] args) {
 		launch(args);
 	}
+
+    /**
+     * @return the TA
+     */
+    public TextArea getTA() {
+        return TA;
+    }
+
+    /**
+     * @param TA the TA to set
+     */
+    public void setTA(TextArea TA) {
+        this.TA = TA;
+    }
 	
 }

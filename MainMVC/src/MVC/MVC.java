@@ -34,6 +34,10 @@ public class MVC {
         this.location = location;
         this.citationnum = citationnum;
     }
+
+    MVC(String licensenumDB, String stateDB, String colorDB, String dateViolationDB, String timeDB, String locationDB) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     /**
      * @return the licensenum
      */
